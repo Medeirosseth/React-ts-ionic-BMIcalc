@@ -7,7 +7,8 @@ const BmiResult: React.FC<{ result: number | string }> = (props) => {
       <IonCol>
         <IonCard>
           <IonCardContent>
-            <h2>{props.result}</h2>
+            <h2>Your Body-Mass-Index</h2>
+            <h2 className="ion-text-center">{props.result}</h2>
           </IonCardContent>
         </IonCard>
       </IonCol>
