@@ -11,11 +11,10 @@ import {
   IonToolbar,
   IonItem,
   IonInput,
-  IonCard,
-  IonCardContent,
 } from "@ionic/react";
 
 import BmiControls from "./Components/BmiControls";
+import BmiResult from "./Components/BmiResult";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -86,17 +85,7 @@ const App: React.FC = () => {
             </IonCol>
           </IonRow>
           <BmiControls onCalculate={calculateBMI} onReset={resetInputs} />
-          {calculatedBMI && (
-            <IonRow>
-              <IonCol>
-                <IonCard>
-                  <IonCardContent>
-                    <h2>{calculatedBMI}</h2>
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-            </IonRow>
-          )}
+          {calculatedBMI && <BmiResult result={calculatedBMI} />}
         </IonGrid>
       </IonContent>
     </IonApp>
