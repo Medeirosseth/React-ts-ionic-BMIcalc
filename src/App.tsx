@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import {
   IonApp,
   IonCol,
@@ -36,6 +36,8 @@ import "@ionic/react/css/display.css";
 import "./theme/variables.css";
 
 const App: React.FC = () => {
+  const [calculatedBMI, setCaclculatedBMI] = useState();
+
   const inputHeightRef = useRef<HTMLIonInputElement>(null);
   const inputWeightRef = useRef<HTMLIonInputElement>(null);
 
